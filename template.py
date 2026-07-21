@@ -12,9 +12,11 @@ list_of_files=[
     "src/api/__init__.py",
     "src/api/routes/__init__.py",
     "src/observability/__init__.py",
+    "src/observability/logging_config.py",
     "src/core/__init__.py",
     "src/core/config.py",
-    "src/core/llm.py"
+    "src/core/llm.py",
+    
 
 ]
 
