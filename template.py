@@ -5,6 +5,14 @@ from pathlib import Path
 logging.basicConfig(format='[%(asctime)s]:%(message)s',level=logging.INFO)
 
 list_of_files=[
+    "src/__init__.py",
+    "src/agents/__init__.py",
+    "src/rag/__init__.py",
+    "src/mcp/__init__.py",
+    "src/api/__init__.py",
+    "src/api/routes/__init__.py",
+    "src/observability/__init__.py",
+    "src/core/__init__.py"
 
 ]
 
