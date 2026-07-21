@@ -30,4 +30,4 @@ for filepath in list_of_files:
             pass
         logging.info(f"creating an empty folder{filepath}")
     else:
-        logging.info(f"the file directory is already exist")
+        logging.info(f"The file directory is already exist")
