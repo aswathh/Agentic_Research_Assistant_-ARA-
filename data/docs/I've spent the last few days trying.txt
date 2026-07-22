@@ -1,0 +1,18 @@
+I've spent the last few days trying to properly understand the Transformer architecture — the foundation behind most of today's LLMs.
+
+Rather than just reading through papers, I tried to put together a complete walkthrough for myself, and thought it might be useful to share:
+
+→ The encoder-decoder workflow, visualized end to end
+→ Each step from tokenization to prediction, worked through with real numbers
+→ Multi-head attention and masked attention, broken down internally — Q, K, V, scale, softmax
+→ A worked example translating English to Tamil, to make it a little less abstract
+
+The hardest part, honestly, wasn't the math itself — it was trying to explain it simply enough that it makes sense on a first read.
+
+If you're also learning GenAI/ML, or looking for a reference that doesn't assume too much prior knowledge, I hope this is helpful.
+
+GitHub: https://github.com/aswathh/transformer_complete_guide
+
+I'd really appreciate any feedback, and please do point out if I've gotten something wrong anywhere. Still learning, and grateful for any thoughts.
+
+#GenerativeAI #MachineLearning #Transformers #DeepLearning #LLM #AI #LearningInPublic
