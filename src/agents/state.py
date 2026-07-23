@@ -11,4 +11,6 @@ class AgentState(TypedDict):
     critic_passed: bool
     retry_count: int
     max_retries: int
+    human_decision: str      # "approve" | "edit" | "reject"
+    human_edited_answer: str
     final_answer: str
