@@ -16,4 +16,5 @@ dependencies = [
     "pathlib>=1.0.1",
     "pydantic-settings>=2.14.2",
     "structlog>=26.1.0",
+    "typing>=3.10.0.0",
 ]
