@@ -30,6 +30,6 @@ def build_graph():
     )
     builder.add_edge("human_interrupt",END)
     check_pointer = MemorySaver()
-    return builder.compile(checkpointer=)
+    return builder.compile(checkpointer=check_pointer)
 
     
