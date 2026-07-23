@@ -2,6 +2,8 @@ from langgraph.graph import END, StateGraph
 from src.agents.state import AgentState
 from src.agents.researcher import researcher_node
 from src.agents.critic import critic_node
+from src.agents.hitl import human_review_node
+from langgraph.checkpoint.memory import MemorySaver
 
 def should_retry(state:AgentState):
     if state["critic_passed"]:
@@ -14,6 +16,7 @@ def build_graph():
     builder = StateGraph(AgentState)
     builder.add_node("researcher",researcher_node)
     builder.add_node("critic",critic_node)
+    builder.add_node("human_interrupt",human_review_node)
     builder.set_entry_point("researcher")
     builder.add_edge("researcher","critic")
     builder.add_conditional_edges(
@@ -21,10 +24,12 @@ def build_graph():
         should_retry,
         {
         "retry":"researcher",
-        "passed":END,
-        "max_retries_reached":END
+        "passed":"human_interrupt",
+        "max_retries_reached":"human_interrupt"
         }
     )
-    return builder.compile()
+    builder.add_edge("human_interrupt",END)
+    check_pointer = MemorySaver()
+    return builder.compile(checkpointer=)
 
     
